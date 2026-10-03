@@ -863,7 +863,7 @@ rules:
 scriptings:
 - generic:
     name: 网络诊断雷达
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络诊断雷达.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E7%BD%91%E7%BB%9C%E8%AF%8A%E6%96%AD%E9%9B%B7%E8%BE%BE.js
 - schedule:
     name: pingme签到
     cron: '35 3 * * * '
@@ -881,37 +881,37 @@ scriptings:
     script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/Gold_XAU.js
 - generic:
     name: 今日黄金
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/今日黄金.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E4%BB%8A%E6%97%A5%E9%BB%84%E9%87%91.js
 - generic:
     name: 测试
     script_url: 测试
 - generic:
     name: 网络信息解锁
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络信息解锁.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E8%A7%A3%E9%94%81.js
 - generic:
     name: SSH监控
     script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/server-monitor.js
 - generic:
     name: 电网
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/南方电网小组件.JS
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E5%8D%97%E6%96%B9%E7%94%B5%E7%BD%91%E5%B0%8F%E7%BB%84%E4%BB%B6.JS
 - generic:
     name: 多国汇率
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/多国汇率.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E5%A4%9A%E5%9B%BD%E6%B1%87%E7%8E%87.js
 - generic:
     name: 每日一言
     script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/hitokoto.js
 - generic:
     name: 今日油价
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/今日油价.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E4%BB%8A%E6%97%A5%E6%B2%B9%E4%BB%B7.js
 - generic:
     name: 万年历
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/万年历.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E4%B8%87%E5%B9%B4%E5%8E%86.js
 - generic:
     name: 网络信息
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络信息.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF.js
 - generic:
     name: 机场订阅
-    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/机场订阅.js
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/%E6%9C%BA%E5%9C%BA%E8%AE%A2%E9%98%85.js
 - schedule:
     name: 途虎养车
     cron: 17 7 * * *
@@ -1014,7 +1014,7 @@ modules:
   icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/fan.png
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/surge-loon-to-egern.yaml
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/螃蟹抓包解锁.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E8%9E%83%E8%9F%B9%E6%8A%93%E5%8C%85%E8%A7%A3%E9%94%81.module
   enabled: true
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PostBox_1.png
 - url: https://mock.forward1.workers.dev/forward.sgmodule
@@ -1031,17 +1031,17 @@ modules:
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/ZhongYouHaoKeEStation.sgmodule
   enabled: true
   icon: https://raw.githubusercontent.com/Orz-3/face/master/CN.png
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/GPS工具箱.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/GPS%E5%B7%A5%E5%85%B7%E7%AE%B1.module
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/波点音乐.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E6%B3%A2%E7%82%B9%E9%9F%B3%E4%B9%90.module
   enabled: true
   icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/bodianyinyue.png
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Himalaya_remove_ads.lpx
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/喜马拉雅.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%96%9C%E9%A9%AC%E6%8B%89%E9%9B%85.module
   enabled: true
   icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/ximalaya.png
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Google搜索重定向.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Google%E6%90%9C%E7%B4%A2%E9%87%8D%E5%AE%9A%E5%90%91.beta.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/BiliBili.Modified.sgmodule
   enabled: true
@@ -1055,16 +1055,16 @@ modules:
   url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/missav.module
   enabled: true
   icon: https://iili.io/KtHNDFe.png
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/微信小程序去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/微信公众号去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/夸克扫描王去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%A4%B8%E5%85%8B%E6%89%AB%E6%8F%8F%E7%8E%8B%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/夸克去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%A4%B8%E5%85%8B%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
 - name: 百度地图去广告
-  url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/百度地图.module
+  url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE.module
   enabled: true
   icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/tengxunditu.png
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/iRingo.Maps.sgmodule
@@ -1086,7 +1086,7 @@ modules:
     Feed.Vertical: 'true'
     LogLevel: OFF
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/哔哩哔哩.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9.module
   enabled: true
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/DualSubs.AddOn.MicrosoftTranslate.sgmodule
   enabled: true
@@ -1107,13 +1107,13 @@ modules:
 - url: http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/AmapAds.conf/_end_/AmapAds.sgmodule?type=qx-rewrite&n=%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%8E%BB%E5%B9%BF%E5%91%8A%40ddgksf2013+%E5%BA%94%E7%94%A8%E5%87%80%E5%8C%96&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
   enabled: true
   icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/tengxunditu.png
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/菜鸟去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E8%8F%9C%E9%B8%9F%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/FleaMarket_remove_ads.lpx
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/淘宝去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E6%B7%98%E5%AE%9D%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/拼多多去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E6%8B%BC%E5%A4%9A%E5%A4%9A%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/DualSubs.Spotify.sgmodule
   compat_arguments:
@@ -1124,13 +1124,13 @@ modules:
   update_interval: -1
   enabled: true
   icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/网易新闻去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/京东去广告.beta.sgmodule
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E4%BA%AC%E4%B8%9C%E5%8E%BB%E5%B9%BF%E5%91%8A.beta.sgmodule
   enabled: true
 - url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/JD_Price.lpx
   enabled: true
-- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/建工计算器.module
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/%E5%BB%BA%E5%B7%A5%E8%AE%A1%E7%AE%97%E5%99%A8.module
   enabled: false
 - url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0%E5%8E%BB%E5%B9%BF%E5%91%8A%40ddgksf2013+%E5%B7%B2%E6%8A%93%E5%8C%85400%E4%BD%99%E5%BA%94%E7%94%A8%E5%8E%BB%E5%BC%80%E5%B1%8F&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
   enabled: true
