@@ -44,39 +44,39 @@ dns:
       value: SSID转发
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/YouTube.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/YouTube.lsr
       value: 谷歌
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/Google.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Google.lsr
       value: 谷歌
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/DouYin.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/DouYin.lsr
       value: 字节
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/TestFlight.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/TestFlight.lsr
       value: 国外
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/Apple.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Apple.lsr
       value: 国内
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/Alibaba.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Alibaba.lsr
       value: 阿里
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/Tencent.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Tencent.lsr
       value: 腾讯
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/ChinaMax.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/ChinaMax.lsr
       value: 国内
       disabled: false
   - proxy_rule_set:
-      match: https://rule.kelee.one/Loon/Global.lsr
+      match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Global.lsr
       value: 国外
       disabled: false
   - domain_wildcard:
@@ -659,7 +659,7 @@ policy_groups:
 rules:
 - rule_set:
     name: 屏蔽系统升级
-    match: https://raw.githubusercontent.com/Moli-X/Resources/main/Loon/Update.list
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Update.list
     policy: REJECT
     disabled: false
 - domain:
@@ -668,15 +668,15 @@ rules:
     policy: 国外手动
     disabled: false
 - rule_set:
-    match: https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Ads_AWAvenue.yaml
     policy: 猎杀广告
     disabled: false
 - rule_set:
-    match: https://adrules.top/adrules.list
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/adrules.list
     policy: 猎杀广告
     disabled: false
 - rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Advertising.list
     policy: 猎杀广告
     disabled: false
 - domain_suffix:
@@ -698,135 +698,135 @@ rules:
     disabled: false
 - rule_set:
     name: Speedtest
-    match: https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/SpeedtestInternational.lsr
     policy: Speedtest
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Spotify.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Spotify.lsr
     policy: Spotify
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Instagram.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Instagram.lsr
     policy: Instagram
     disabled: false
 - rule_set:
     name: Telegram
-    match: https://rule.kelee.one/Loon/Telegram.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Telegram.lsr
     policy: Telegram
     disabled: false
 - rule_set:
     name: GitHub
-    match: https://rule.kelee.one/Loon/GitHub.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/GitHub.lsr
     policy: GitHub
     disabled: false
 - rule_set:
     name: AI
-    match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/AI.lsr
     policy: ChatGPT
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Microsoft.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Microsoft.lsr
     policy: Microsoft
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/TestFlight.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/TestFlight.lsr
     policy: TestFlight
     disabled: false
 - rule_set:
     name: Apple
-    match: https://rule.kelee.one/Loon/Apple.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Apple.lsr
     policy: Apple
     disabled: false
 - rule_set:
     name: YouTube
-    match: https://rule.kelee.one/Loon/YouTube.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/YouTube.lsr
     policy: YouTube
     disabled: false
 - rule_set:
     name: Google
-    match: https://rule.kelee.one/Loon/Google.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Google.lsr
     policy: Google
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Twitter.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Twitter.lsr
     policy: Twitter
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/WeChat.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/WeChat.lsr
     policy: 微信
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/DouYin.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/DouYin.lsr
     policy: 抖音
     disabled: false
 - rule_set:
     name: TikTok
-    match: https://rule.kelee.one/Loon/TikTok.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/TikTok.lsr
     policy: TikTok
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/BiliBili.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/BiliBili.lsr
     policy: BiliBili
     disabled: false
 - rule_set:
     name: 小米
-    match: https://rule.kelee.one/Loon/XiaoMi.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/XiaoMi.lsr
     policy: 小米
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/KugouKuwo.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/KugouKuwo.lsr
     policy: QQ音乐
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Tencent.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Tencent.lsr
     policy: QQ
     disabled: false
 - rule_set:
     name: 京东
-    match: https://rule.kelee.one/Loon/JingDong.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/JingDong.lsr
     policy: 京东
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/NetEase.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/NetEase.lsr
     policy: 网易
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/GaoDe.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/GaoDe.lsr
     policy: 高德
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Baidu.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Baidu.lsr
     policy: 百度
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Alibaba.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Alibaba.lsr
     policy: 阿里巴巴
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/Pinduoduo.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Pinduoduo.lsr
     policy: 拼多多
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/ChinaMobile.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/ChinaMobile.lsr
     policy: 中国移动
     disabled: false
 - rule_set:
-    match: https://rule.kelee.one/Loon/ChinaTelecom.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/ChinaTelecom.lsr
     policy: 中国电信
     disabled: false
 - rule_set:
     name: Global
-    match: https://rule.kelee.one/Loon/Global.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/Global.lsr
     policy: 国外
     disabled: false
 - rule_set:
     name: ChinaMax
-    match: https://rule.kelee.one/Loon/ChinaMax.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/ChinaMax.lsr
     policy: 中国
     disabled: false
 - rule_set:
     name: ChinaASN
-    match: https://rule.kelee.one/Loon/ChinaASN.lsr
+    match: https://raw.githubusercontent.com/lan-node/Egern/main/rules/ChinaASN.lsr
     policy: 中国
     disabled: false
 - geoip:
