@@ -1,0 +1,1142 @@
+ipv6: false
+vif_only: true
+block_quic: false
+close_connections_on_policy_change: true
+hide_vpn_icon: false
+geoip_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb
+asn_db_url: https://raw.githubusercontent.com/Loyalsoldier/geoip/release/GeoLite2-ASN.mmdb
+proxy_latency_test_url: https://www.apple.com/library/test/success.html
+direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
+compat_route: false
+include_all_networks: false
+include_apns: false
+include_cellular_services: false
+include_local_networks: false
+vif_excluded_routes:
+- 193.168.0.0/24
+- 172.16.0.0/12
+- 10.0.0.0/8
+- 192.168.0.0/16
+dns:
+  bootstrap:
+  - 119.29.29.29
+  - 223.5.5.5
+  upstreams:
+    SSID转发:
+    - system
+    谷歌:
+    - https://8.8.8.8/dns-query
+    国外:
+    - https://8.8.8.8/dns-query
+    - https://1.1.1.1/dns-query
+    国内:
+    - https://doh.pub/dns-query
+    - h3://dns.alidns.com/dns-query
+    腾讯:
+    - https://doh.pub/dns-query
+    阿里:
+    - h3://dns.alidns.com/dns-query
+    字节:
+    - h3://dns.alidns.com/dns-query
+  forward:
+  - ssid:
+      match: 404 NotFound
+      value: SSID转发
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/YouTube.lsr
+      value: 谷歌
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Google.lsr
+      value: 谷歌
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/DouYin.lsr
+      value: 字节
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/TestFlight.lsr
+      value: 国外
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Apple.lsr
+      value: 国内
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Alibaba.lsr
+      value: 阿里
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Tencent.lsr
+      value: 腾讯
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/ChinaMax.lsr
+      value: 国内
+      disabled: false
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Global.lsr
+      value: 国外
+      disabled: false
+  - domain_wildcard:
+      match: '*'
+      value: 国外
+      disabled: false
+  proxy_nameservers:
+  - https://doh.pub/dns-query
+  - h3://dns.alidns.com/dns-query
+policy_groups:
+- select:
+    name: Telegram
+    policies:
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    - 日本
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+    hidden: false
+- select:
+    name: Spotify
+    policies:
+    - 美国
+    - 日本
+    - 香港
+    - 台湾
+    - 新加坡
+    - 便宜流量
+    - 中国
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    hidden: false
+- select:
+    name: YouTube
+    policies:
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    - 日本
+    - 便宜流量
+    flatten: false
+    block_quic: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+    hidden: false
+- select:
+    name: Google
+    policies:
+    - 美国
+    - 香港
+    - 台湾
+    - 新加坡
+    - 日本
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
+    hidden: false
+- select:
+    name: Emby
+    policies:
+    - 便宜流量
+    - 中国
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    - 日本
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Emby.png
+    hidden: false
+- select:
+    name: ChatGPT
+    policies:
+    - 美国
+    - 香港
+    - 台湾
+    - 新加坡
+    - 日本
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    hidden: false
+- select:
+    name: TikTok
+    policies:
+    - 日本
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png
+    hidden: false
+- select:
+    name: GitHub
+    policies:
+    - 美国
+    - 香港
+    - 日本
+    - 新加坡
+    - 台湾
+    - 韩国
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+    hidden: false
+- select:
+    name: Instagram
+    policies:
+    - 美国
+    - 香港
+    - 台湾
+    - 新加坡
+    - 日本
+    - 韩国
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Instagram.png
+    hidden: false
+- select:
+    name: Twitter
+    policies:
+    - 美国
+    - 香港
+    - 台湾
+    - 新加坡
+    - 日本
+    - 韩国
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+    hidden: false
+- select:
+    name: Microsoft
+    policies:
+    - 中国
+    - 美国
+    - 香港
+    - 台湾
+    - 新加坡
+    - 日本
+    - 韩国
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png
+    hidden: false
+- select:
+    name: TestFlight
+    policies:
+    - 便宜流量
+    - 韩国
+    - 日本
+    - 新加坡
+    - 台湾
+    - 香港
+    - 中国
+    - 美国
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/testflight(2).png
+    hidden: false
+- select:
+    name: Apple
+    policies:
+    - 中国
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    - 日本
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+    hidden: false
+- select:
+    name: Speedtest
+    policies:
+    - 国外
+    - 香港
+    - 台湾
+    - 美国
+    - 新加坡
+    - 日本
+    - 韩国
+    - 便宜流量
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Speedtest.png
+    hidden: false
+- conditional:
+    name: 香港
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 香港可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: true
+- conditional:
+    name: 台湾
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 台湾可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: true
+- conditional:
+    name: 美国
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 美国可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: true
+- conditional:
+    name: 新加坡
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 新加坡可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: true
+- conditional:
+    name: 日本
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 日本可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: true
+- conditional:
+    name: 韩国
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 韩国可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: true
+- conditional:
+    name: 便宜流量
+    rules:
+    - ssid:
+        match: 404 NotFound
+        policy: 中国
+    default_policy: 便宜流量可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+    hidden: true
+- conditional:
+    name: 国外
+    rules:
+    - ssid:
+        match: ''
+        policy: 中国
+    default_policy: 国外可用
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    hidden: true
+- fallback:
+    name: 香港可用
+    policies:
+    - 香港手动
+    - 香港智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: true
+- fallback:
+    name: 台湾可用
+    policies:
+    - 台湾手动
+    - 台湾智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: true
+- fallback:
+    name: 美国可用
+    policies:
+    - 美国手动
+    - 美国智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: true
+- fallback:
+    name: 新加坡可用
+    policies:
+    - 新加坡手动
+    - 新加坡智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: true
+- fallback:
+    name: 日本可用
+    policies:
+    - 日本手动
+    - 日本智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: true
+- fallback:
+    name: 韩国可用
+    policies:
+    - 韩国手动
+    - 韩国智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: true
+- fallback:
+    name: 便宜流量可用
+    policies:
+    - 便宜流量手动
+    - 便宜流量智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+    hidden: true
+- fallback:
+    name: 国外可用
+    policies:
+    - 国外手动
+    - 国外智能
+    flatten: false
+    interval: 300
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    hidden: true
+- smart:
+    name: 香港智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(香港|HK|HongKong|Hong Kong|HKBN|HGC|HKIX|🇭🇰|港|穗|深港|京港)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: true
+- smart:
+    name: 台湾智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(台湾|TW|Taiwan|TaiWan|臺湾|台|🇹🇼|台中|台北|高雄|新竹|TPE|TWBN|TW-)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: true
+- smart:
+    name: 美国智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(美国|US|United States|USA|美|洛杉矶|圣何塞|达拉斯|芝加州|纽约|西雅图|弗吉尼亚|亚特兰大|芝加哥|凤凰城|波特兰|LAX|SJC|SEA|IAD|DFW|ATL|PHX|🇺🇸)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: true
+- smart:
+    name: 新加坡智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(新加坡|SG|Singapore|Sing|SGP|🇸🇬|新加|狮城)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: true
+- smart:
+    name: 日本智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(日本|JP|Japan|Tokyo|大阪|东京|大阪|埼玉|九州|北海道|软银|Softbank|IIJ|KDDI|NTT|🇯🇵|东京都|大阪府|大阪市|大阪城|东京塔|东京湾|TYO|KIX|HND|NRT)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: true
+- smart:
+    name: 韩国智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: 韩国|KR|Korea|South.?Korea|首尔|韩|仁川|釜山|济州|首爾|韓國|🇰🇷|SEL|ICN|PUS|KR
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: true
+- smart:
+    name: 便宜流量智能
+    policies:
+    - 订阅
+    flatten: true
+    filter: (?i)良心|星云|0.1
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+    hidden: true
+    priorities:
+      英国: 0.1
+      日本[x0.5]: 0.4
+      新加坡: 0.5
+- smart:
+    name: 国外智能
+    policies:
+    - 订阅
+    flatten: true
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    hidden: true
+- select:
+    name: 香港手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(香港|HK|HongKong|Hong Kong|HKBN|HGC|HKIX|🇭🇰|港|穗|深港|京港)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+    hidden: false
+- select:
+    name: 台湾手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(台湾|TW|Taiwan|TaiWan|臺湾|台|🇹🇼|台中|台北|高雄|新竹|TPE|TWBN|TW-)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+    hidden: false
+- select:
+    name: 美国手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(美国|US|United States|USA|美|洛杉矶|圣何塞|达拉斯|芝加州|纽约|西雅图|弗吉尼亚|亚特兰大|芝加哥|凤凰城|波特兰|LAX|SJC|SEA|IAD|DFW|ATL|PHX|🇺🇸)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+    hidden: false
+- select:
+    name: 新加坡手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(新加坡|SG|Singapore|Sing|SGP|🇸🇬|新加|狮城)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+    hidden: false
+- select:
+    name: 日本手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: ^(?!.*(赔钱)).*(日本|JP|Japan|Tokyo|大阪|东京|大阪|埼玉|九州|北海道|软银|Softbank|IIJ|KDDI|NTT|🇯🇵|东京都|大阪府|大阪市|大阪城|东京塔|东京湾|TYO|KIX|HND|NRT)
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+    hidden: false
+- select:
+    name: 韩国手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: 韩国|KR|Korea|South.?Korea|首尔|韩|仁川|釜山|济州|首爾|韓國|🇰🇷|SEL|ICN|PUS|KR
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+    hidden: false
+- select:
+    name: 便宜流量手动
+    policies:
+    - 订阅
+    flatten: true
+    filter: (?i)良心|星云|0.1
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+    hidden: false
+- select:
+    name: 国外手动
+    policies:
+    - 订阅
+    flatten: true
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+    hidden: false
+- select:
+    name: 微信
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/wechat(1).png
+    hidden: true
+- select:
+    name: QQ
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/QQ.png
+    hidden: true
+- select:
+    name: 京东
+    policies:
+    - DIRECT
+    flatten: false
+    block_quic: true
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/jingdong.png
+    hidden: true
+- select:
+    name: 网易
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netease.png
+    hidden: true
+- select:
+    name: 高德
+    policies:
+    - DIRECT
+    flatten: false
+    block_quic: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/tengxunditu.png
+    hidden: true
+- select:
+    name: 百度
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/baidunetdisk(1).png
+    hidden: true
+- select:
+    name: 抖音
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok_1.png
+    hidden: true
+- select:
+    name: BiliBili
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+    hidden: true
+- select:
+    name: QQ音乐
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/kugou.png
+    hidden: true
+- select:
+    name: 小米
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/mega.png
+    hidden: true
+- select:
+    name: 阿里巴巴
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taobao.png
+    hidden: true
+- select:
+    name: 拼多多
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/pinduoduo.png
+    hidden: true
+- select:
+    name: 中国电信
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/dianxin.png
+    hidden: true
+- select:
+    name: 中国移动
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/yidong(1).png
+    hidden: true
+- select:
+    name: 中国
+    policies:
+    - DIRECT
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/CN.png
+    hidden: true
+- select:
+    name: 猎杀广告
+    policies:
+    - REJECT-NO-DROP
+    flatten: false
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png
+    hidden: true
+- external:
+    name: 订阅
+    type: select
+    urls:
+    - https://ucoll.cc.cd/sub?token=002d6fc83bee043d8eb3d2f10b671a74
+    filter: ^(?!.*(重置|试用|过期| Date|过期|GB|Day|到期|维护|失效|演示|官方|免费|流量|剩余|已用|跑路|待补|补货|停用|禁售|禁用|故障|测速|备用|应急|落地|回程|中继|Relay|Tunnel|游戏|专线|备用|待续| Construction|Expired|Free|Trial|Test|Demo|Maintain|Outage|Sold.?Out|Closed)).*(?!^$)
+    update_interval: 7200
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/02ProxySoftLogo/Egern.png
+    hidden: false
+rules:
+- rule_set:
+    name: 屏蔽系统升级
+    match: https://raw.githubusercontent.com/Moli-X/Resources/main/Loon/Update.list
+    policy: REJECT
+    disabled: false
+- domain:
+    name: 域名检测
+    match: myip.ipip.net
+    policy: 国外手动
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/Repcz/Tool/refs/heads/X/Egern/Rules/Ads_AWAvenue.yaml
+    policy: 猎杀广告
+    disabled: false
+- rule_set:
+    match: https://adrules.top/adrules.list
+    policy: 猎杀广告
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Advertising/Advertising.list
+    policy: 猎杀广告
+    disabled: false
+- domain_suffix:
+    name: 稳健图书
+    match: hsu.life
+    policy: 香港
+    disabled: false
+- rule_set:
+    match: 强制直连
+    policy: 中国
+    disabled: false
+- rule_set:
+    match: 强制代理
+    policy: 美国
+    disabled: false
+- rule_set:
+    match: emby
+    policy: Emby
+    disabled: false
+- rule_set:
+    name: Speedtest
+    match: https://kelee.one/Tool/Loon/Lsr/SpeedtestInternational.lsr
+    policy: Speedtest
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Spotify.lsr
+    policy: Spotify
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Instagram.lsr
+    policy: Instagram
+    disabled: false
+- rule_set:
+    name: Telegram
+    match: https://rule.kelee.one/Loon/Telegram.lsr
+    policy: Telegram
+    disabled: false
+- rule_set:
+    name: GitHub
+    match: https://rule.kelee.one/Loon/GitHub.lsr
+    policy: GitHub
+    disabled: false
+- rule_set:
+    name: AI
+    match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+    policy: ChatGPT
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Microsoft.lsr
+    policy: Microsoft
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/TestFlight.lsr
+    policy: TestFlight
+    disabled: false
+- rule_set:
+    name: Apple
+    match: https://rule.kelee.one/Loon/Apple.lsr
+    policy: Apple
+    disabled: false
+- rule_set:
+    name: YouTube
+    match: https://rule.kelee.one/Loon/YouTube.lsr
+    policy: YouTube
+    disabled: false
+- rule_set:
+    name: Google
+    match: https://rule.kelee.one/Loon/Google.lsr
+    policy: Google
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Twitter.lsr
+    policy: Twitter
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/WeChat.lsr
+    policy: 微信
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/DouYin.lsr
+    policy: 抖音
+    disabled: false
+- rule_set:
+    name: TikTok
+    match: https://rule.kelee.one/Loon/TikTok.lsr
+    policy: TikTok
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/BiliBili.lsr
+    policy: BiliBili
+    disabled: false
+- rule_set:
+    name: 小米
+    match: https://rule.kelee.one/Loon/XiaoMi.lsr
+    policy: 小米
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/KugouKuwo.lsr
+    policy: QQ音乐
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Tencent.lsr
+    policy: QQ
+    disabled: false
+- rule_set:
+    name: 京东
+    match: https://rule.kelee.one/Loon/JingDong.lsr
+    policy: 京东
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/NetEase.lsr
+    policy: 网易
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/GaoDe.lsr
+    policy: 高德
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Baidu.lsr
+    policy: 百度
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Alibaba.lsr
+    policy: 阿里巴巴
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/Pinduoduo.lsr
+    policy: 拼多多
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/ChinaMobile.lsr
+    policy: 中国移动
+    disabled: false
+- rule_set:
+    match: https://rule.kelee.one/Loon/ChinaTelecom.lsr
+    policy: 中国电信
+    disabled: false
+- rule_set:
+    name: Global
+    match: https://rule.kelee.one/Loon/Global.lsr
+    policy: 国外
+    disabled: false
+- rule_set:
+    name: ChinaMax
+    match: https://rule.kelee.one/Loon/ChinaMax.lsr
+    policy: 中国
+    disabled: false
+- rule_set:
+    name: ChinaASN
+    match: https://rule.kelee.one/Loon/ChinaASN.lsr
+    policy: 中国
+    disabled: false
+- geoip:
+    name: GeoIP-CN
+    match: CN
+    policy: 中国
+    no_resolve: true
+    disabled: false
+- domain_suffix:
+    match: cn
+    policy: DIRECT
+    disabled: false
+- ip_cidr:
+    match: 192.168.0.0/16
+    policy: DIRECT
+- ip_cidr:
+    match: 10.0.0.0/8
+    policy: DIRECT
+- ip_cidr:
+    match: 127.0.0.0/8
+    policy: DIRECT
+- ip_cidr:
+    match: 172.16.0.0/12
+    policy: DIRECT
+- ip_cidr:
+    match: 192.128.0.0/16
+    policy: DIRECT
+- ip_cidr:
+    match: 224.0.0.0/24
+    policy: DIRECT
+- default:
+    name: 漏网之鱼
+    policy: 国外
+scriptings:
+- generic:
+    name: 网络诊断雷达
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络诊断雷达.js
+- schedule:
+    name: pingme签到
+    cron: '35 3 * * * '
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/PingMe_task.js
+- generic:
+    name: 网络信息2
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/Network-Pro.js
+- schedule:
+    name: TF监控
+    cron: ''
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/TestFlight.js
+    disabled: true
+- generic:
+    name: 黄金K图
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/Gold_XAU.js
+- generic:
+    name: 今日黄金
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/今日黄金.js
+- generic:
+    name: 测试
+    script_url: 测试
+- generic:
+    name: 网络信息解锁
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络信息解锁.js
+- generic:
+    name: SSH监控
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/server-monitor.js
+- generic:
+    name: 电网
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/南方电网小组件.JS
+- generic:
+    name: 多国汇率
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/多国汇率.js
+- generic:
+    name: 每日一言
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/hitokoto.js
+- generic:
+    name: 今日油价
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/今日油价.js
+- generic:
+    name: 万年历
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/万年历.js
+- generic:
+    name: 网络信息
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/网络信息.js
+- generic:
+    name: 机场订阅
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/机场订阅.js
+- schedule:
+    name: 途虎养车
+    cron: 17 7 * * *
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/tuhu.js
+    timeout: 300
+    disabled: true
+- http_response:
+    name: 途虎
+    match: https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo
+    script_url: https://raw.githubusercontent.com/lan-node/Egern/main/js/tuhu.js
+    body_required: false
+    binary_body: false
+    disabled: true
+mitm:
+  ca_p12: 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
+  ca_passphrase: egern
+widgets:
+- name: 网络诊断雷达
+  script_name: 网络诊断雷达
+  env:
+    YS: '1'
+- name: 机场订阅
+  script_name: 机场订阅
+- name: 万年历
+  script_name: 万年历
+- name: 今日油价
+  script_name: 今日油价
+- name: 黄金K图
+  script_name: 黄金K图
+  env:
+    KLT: '101'
+- name: 多国汇率
+  script_name: 多国汇率
+- name: 每日一言
+  script_name: 每日一言
+  env:
+    TYPE: d
+modules:
+- name: Trakt 增强
+  url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/trakt_simplified_chinese.plugin
+  compat_arguments:
+    fakeVipEnabled: 'true'
+    posterImageMode: 原片语言
+    historyEpisodesMergedByShow: 'false'
+    translationEngine: 谷歌翻译
+    characterTranslationEnabled: 'true'
+    eplayerxButtonOrder: '0'
+    infuseButtonOrder: '0'
+    debugMode: 关闭
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/iRingo.WeatherKit.yaml
+  compat_arguments:
+    AirQuality.Calculate.Algorithm: UBA
+    LogLevel: OFF
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/PingMe.yaml
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/kugouvip.lpx
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/kugou(1).png
+- url: https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/CADReader.sgmodule
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_News.png
+- url: https://reven.jsforbaby.workers.dev/reven/iTunes.sgmodule
+  compat_arguments:
+    Country: US
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/App_Store.png
+- url: https://mock.parsingbook.workers.dev/parsingbook/parsingbook.sgmodule
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Azure.png
+- url: https://raw.githubusercontent.com/Yu9191/NeteasemusicAd/main/wyy.sgmodule
+  compat_arguments:
+    发现: '1'
+    笔记: '1'
+    关注: '1'
+    搜索: '1'
+    我的自定义名称: 她的
+    每日推荐: '1'
+    推荐歌单: '0'
+    最近常听: '0'
+    音乐合伙人: '1'
+  enabled: false
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/WeTalk.yml
+  env:
+    CAPTURE_ENABLED: 'false'
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/BaiduSearchWebpage_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Telegram.yaml
+  env:
+    CLIENT: Swiftgram
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/one.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/insav.tv.sgmodule
+  compat_arguments:
+    播放器名称: SenPlayer
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/fan.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/surge-loon-to-egern.yaml
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/螃蟹抓包解锁.module
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PostBox_1.png
+- url: https://mock.forward1.workers.dev/forward.sgmodule
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/forward.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/bilibili.sgmodule
+  compat_arguments:
+    创作中心: '0'
+    过滤置顶评论广告: '0'
+    空降助手策略: 香港
+    日志等级: '5'
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/ZhongYouHaoKeEStation.sgmodule
+  enabled: true
+  icon: https://raw.githubusercontent.com/Orz-3/face/master/CN.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/GPS工具箱.module
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/波点音乐.module
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/bodianyinyue.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Himalaya_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/喜马拉雅.module
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/ximalaya.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Google搜索重定向.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/BiliBili.Modified.sgmodule
+  enabled: true
+- url: https://ddgksf2013.top/module/ScriptHub.Egern.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/wyy-surge.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/pluginhub.yaml
+  enabled: true
+- name: missav网页净化
+  url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/missav.module
+  enabled: true
+  icon: https://iili.io/KtHNDFe.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/微信小程序去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/微信公众号去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/夸克扫描王去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/夸克去广告.beta.sgmodule
+  enabled: true
+- name: 百度地图去广告
+  url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/百度地图.module
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/tengxunditu.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/iRingo.Maps.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/Biliverse.Enhanced.plugin
+  compat_arguments:
+    Home.Switch: 'true'
+    Home.Tab_default: '2037'
+    Home.Top_left: mine
+    Region.Switch: 'true'
+    Mine.Switch: 'true'
+    Mine.iPad.Switch: 'true'
+    Storage: PersistentStore
+    LogLevel: WARN
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/BiliBili.ADBlock.sgmodule
+  compat_arguments:
+    Feed.Activity: 'true'
+    Feed.Vertical: 'true'
+    LogLevel: OFF
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/哔哩哔哩.module
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/DualSubs.AddOn.MicrosoftTranslate.sgmodule
+  enabled: true
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/YouTube.ipx
+  compat_arguments:
+    block_shorts: 'true'
+    block_vertical_live: 'true'
+    blockUpload: 'true'
+    blockShorts: 'true'
+    autoHd: 'true'
+    blockGames: 'true'
+    blockVerticalLive: 'true'
+    jumpAhead: 'true'
+    blockStore: 'true'
+    nativeDownload: 'true'
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/AmapAds.conf/_end_/AmapAds.sgmodule?type=qx-rewrite&n=%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%E5%8E%BB%E5%B9%BF%E5%91%8A%40ddgksf2013+%E5%BA%94%E7%94%A8%E5%87%80%E5%8C%96&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
+  enabled: true
+  icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/tengxunditu.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/菜鸟去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/FleaMarket_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/淘宝去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/拼多多去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/DualSubs.Spotify.sgmodule
+  compat_arguments:
+    Vendor: Microsoft
+    LogLevel: OFF
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/spotify.module
+  update_interval: -1
+  enabled: true
+  icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/网易新闻去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/京东去广告.beta.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/JD_Price.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/建工计算器.module
+  enabled: false
+- url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0%E5%8E%BB%E5%B9%BF%E5%91%8A%40ddgksf2013+%E5%B7%B2%E6%8A%93%E5%8C%85400%E4%BD%99%E5%BA%94%E7%94%A8%E5%8E%BB%E5%BC%80%E5%B1%8F&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module&category=ddgksf2013
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/SubStore.sgmodule
+  enabled: false
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/script-hub.surge.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/lan-node/Egern/main/modules/boxjs.rewrite.surge.sgmodule
+  enabled: true
